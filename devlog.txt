@@ -1,2 +1,0 @@
-set up navbar first for index.html file, then duplicate the file twice and make them the rules page
-and the game page.
