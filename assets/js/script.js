@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
   startGame();
 });
 
+var resetBtn = document.getElementById('reset-game');
+
+resetBtn.addEventListener('click', function() {
+    window.location.reload();
+})
+
 /* Setting default score for player and dealer */
 let dealerScore = 0;
 let playerScore = 0;
