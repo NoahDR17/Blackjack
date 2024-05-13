@@ -40,7 +40,7 @@ h2 {
     font-size: 2rem;
 }
 h3 {
-    color: #000;
+    color: #fff;
     font-size: 1.75rem;
 }
 p { 
@@ -144,4 +144,16 @@ nav a {
     width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
+}
+/* Game Page */
+
+#player-cards img{
+    height: 125px;
+    width: 90px;
+    margin: 1px;
+}
+#dealer-cards img {
+    height: 125px;
+    width: 90px;
+    margin: 1px;
 }
