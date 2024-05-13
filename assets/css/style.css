@@ -146,16 +146,51 @@ nav a {
     justify-content: space-evenly;
 }
 /* Game Page */
-#reset-game{
-    margin-top: 55px;
-}
+
+#game-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+        url(../media/background\ image.png);
+        background-size: cover;
+        background-position: center;    
+        position: relative;}
+
 #player-cards img{
+    padding-top: 15px;
     height: 125px;
     width: 90px;
     margin: 1px;
 }
 #dealer-cards img {
+    padding-top: 15px;
     height: 125px;
     width: 90px;
     margin: 1px;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#dealer-container {
+    padding-top: 15px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+#player-container {
+    padding-top: 15px;
+    text-align: center  ;
+}
+
+.buttonSize{
+    width: 75px;
+    height: 50px;
+}
+
+#game-btns {
+    padding-top: 15px;
+}
+#reset-game {
+    margin-top: 25px;
 }

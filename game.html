@@ -14,7 +14,7 @@
     <title>Blackjack</title>
 </head>
 
-<body>
+<body id="game-page">
     <header>
         <nav>
             <a class="defaultTxt" href="index.html">Home</a>
@@ -22,27 +22,35 @@
             <a class="defaultTxt" href="game.html">Game</a>
         </nav>
     </header>
+    <div id="game-container" class="centerAlign">
+        <div id="dealer-container">
+            <h2>Dealer: <span id="dealer-score"></span></h2>
+            <div id="dealer-cards">
+                <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">
+            </div>
+        </div>
 
-    <button id="reset-game">Reset Game</button>
-    <button>End Game</button>
-    <div>
-        <div><h3>Money:</h3></div>
-        <div></div>
+        <div id="player-container">
+            <h2>Player: <span id="player-score"></span></h2>
+            <div id="player-cards">
+            </div>
+
+        </div>
+        <div id="game-btns">
+            <button id="hit" class="buttonSize">Hit</button>
+            <button id="stay" class="buttonSize">Stay</button>
+        </div>
+        
+        <div>
+            <div>
+                <h3>Money:<span id="money-count"></span></h3>
+            </div>
+            <p id="results"></p>
+            <button id="reset-game" class="buttonSize" >Reset Game</button>
+        </div>
+
+        <script src="/assets/js/script.js"></script>
     </div>
-
-    <h2>Dealer: <span id="dealer-score"></span></h2>
-    <div id="dealer-cards">
-        <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">  
-    </div>
-
-    <h2>Player: <span id="player-score"></span></h2>
-    <div id="player-cards">
-
-    </div>
-    <button id="hit">Hit</button>
-    <button id="stay">Stay</button>
-    <p id="results"></p>
-    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
