@@ -1,21 +1,26 @@
+/* adding this if statement because there is no game link or rules link in game.html, 
+or rules.html, which caused it to throw errors */
 var gameLink = document.getElementById("game-link");
-
-gameLink.addEventListener("click", function () {
-  window.location.href = "game.html";
-});
+if (gameLink !== null) {
+  gameLink.addEventListener("click", function () {
+    window.location.href = "game.html";
+  });
+}
 
 var rulesLink = document.getElementById("rules-link");
-
-rulesLink.addEventListener("click", function () {
-  window.location.href = "rules.html";
-});
+if (rulesLink !== null) {
+  rulesLink.addEventListener("click", function () {
+    window.location.href = "rules.html";
+  });
+}
 
 /* Game Page */
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
   createDeck();
   shuffleDeck();
   startGame();
-};
+});
+
 /* Setting default score for player and dealer */
 let dealerScore = 0;
 let playerScore = 0;
@@ -28,6 +33,8 @@ let canHit = true;
 /* creates empty deck array */
 let deck;
 
+/* variable for hidden card */
+let hidden;
 /**
  * creates a deck of 52 cards combining values and suits
  */
@@ -54,6 +61,7 @@ function createDeck() {
       deck.push(cardValue[y] + "-" + cardSuit[x]);
     }
   }
+  console.log(deck);
 }
 
 /**
@@ -69,12 +77,96 @@ function shuffleDeck() {
   console.log(deck);
 }
 
+function startGame() {
+  // checks if hidden dealer card is an ace card
+  hidden = deck.pop();
+  dealerScore += getValue(hidden);
+  dealerAceCount += checkForAce(hidden);
 
-function startGame() {}
-function hit() {}
-function stand() {}
+  let cardImg = document.createElement("img");
+  let card = deck.pop();
+  cardImg.src = "./assets/cards/" + card + ".png";
+  dealerScore += getValue(card);
+  // checks if each card added is an ace card
+  dealerAceCount += checkForAce(card);
+  document.getElementById("dealer-cards").append(cardImg);
 
-function getValue() {
+  // deals the first two cards for the player
+  for (let i = 0; i < 2; i++) {
+    let cardImg = document.createElement("img");
+    let card = deck.pop();
+    cardImg.src = "./assets/cards/" + card + ".png";
+    playerScore += getValue(card);
+    playerAceCount += checkForAce(card);
+    document.getElementById("player-cards").append(cardImg);
+  }
+  // calls the hit, and stay functions when their associated buttons are pressed
+  document.getElementById("hit").addEventListener("click", hit);
+  document.getElementById("stay").addEventListener("click", stay);
+}
+function hit() {
+  // checks if can hit is true or false, if false function ends.
+  if (!canHit) {
+    return;
+  }
+  let cardImg = document.createElement("img");
+  let card = deck.pop();
+  cardImg.src = "./assets/cards/" + card + ".png";
+  playerScore += getValue(card);
+  playerAceCount += checkForAce(card);
+  document.getElementById("player-cards").append(cardImg);
+
+  // if the player score is still over 21 after reducing any ace values than canHit becomes false.
+  if (reduceAce(playerScore, playerAceCount) > 21) {
+    canHit = false;
+  }
+}
+
+function stay() {
+  dealerScore = reduceAce(dealerScore, dealerAceCount);
+  playerScore = reduceAce(playerScore, playerAceCount);
+
+  canHit = false;
+
+  let message = "";
+  if (playerScore > 21) {
+    message = "You Lose";
+  }
+  if (dealerScore > 21) {
+    message = "You Win";
+  }
+  if (playerScore == dealerScore) {
+    message = "Tie";
+  }
+  if (playerScore > dealerScore) {
+    message = "You Win";
+  }
+  if (playerScore < dealerScore) {
+    message = "You Lose";
+  }
+
+  // while dealer score is less than 17, keep adding cards to dealer hand
+  while (dealerScore < 17) {
+    let cardImg = document.createElement("img");
+    let card = deck.pop();
+    cardImg.src = "./assets/cards/" + card + ".png";
+    dealerScore += getValue(card);
+    // checks if each card added is an ace card
+    dealerAceCount += checkForAce(card);
+    document.getElementById("dealer-cards").append(cardImg);
+  }
+
+  // Reveal the hidden dealer card
+  let hiddenCardImg = document.getElementById("hidden");
+  hiddenCardImg.src = "./assets/cards/" + hidden + ".png";
+
+  // displaying dealer and player score after round ends
+  document.getElementById("dealer-score").innerText = dealerScore;
+  document.getElementById("player-score").innerText = playerScore;
+  document.getElementById("results").innerText = message;
+}
+
+function getValue(card) {
   let data = card.split("-"); // splits the array into two seperate values, '4-C' - '4', 'C'
   let value = data[0]; // specifies the first value '4'
 
@@ -90,7 +182,7 @@ function getValue() {
   return parseInt(value);
 }
 
-function checkForAce() {
+function checkForAce(card) {
   if (card[0] == "A") {
     return 1;
   }
