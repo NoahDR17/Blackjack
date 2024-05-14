@@ -76,8 +76,7 @@ nav a {
 
 nav a:hover {
     color: red;
-    font-style: bold;
-}
+}   
 
 nav a::after {
     content: '';
@@ -124,7 +123,7 @@ nav a:hover::after {
     margin-top: 50px;
 }
 
-#homeCardImg {
+.homeCardImg {
     width: 125px;
     height: 175px;
     background-color: rgb(255, 255, 255);
@@ -250,7 +249,7 @@ nav a:hover::after {
 
 #reset-game {
     margin-top: 25px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border-radius: 10px;
 }
 
@@ -334,7 +333,7 @@ nav a:hover::after {
         font-size: 3.5rem;
     }
     /* home page */
-    #homeCardImg {
+    .homeCardImg {
         display: none;
     }
     #pageLinks {
