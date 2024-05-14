@@ -8,6 +8,7 @@
     padding: 0;
     font-family: "lato", sans-serif;
 }
+
 /* */
 .defaultTxt {
     color: #fff;
@@ -27,27 +28,33 @@ body {
     flex-direction: column;
     background-color: #636363;
 }
+
 main {
     width: 100vw;
     height: 100%;
 }
+
 h1 {
     color: #fff;
     font-size: 4rem;
 }
+
 h2 {
     color: #fff;
     font-size: 2rem;
 }
+
 h3 {
     color: #fff;
     font-size: 1.75rem;
 }
-p { 
+
+p {
     font-size: 1rem;
 }
-header { 
-    width: 100vw;  
+
+header {
+    width: 100vw;
     height: 50px;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
@@ -71,6 +78,7 @@ nav a:hover {
     color: red;
     font-style: bold;
 }
+
 nav a::after {
     content: '';
     position: absolute;
@@ -82,24 +90,26 @@ nav a::after {
     visibility: hidden;
     /* his line sets the width of the element to zero along the X-axis,
    effectively hiding it initially */
-    transform: scaleX(0); 
+    transform: scaleX(0);
 
     transition: all 0.3s ease-in-out;
-  }
-  
-  nav a:hover::after {
+}
+
+nav a:hover::after {
     visibility: visible;
     /* gradually increases the width with the transition */
     transform: scaleX(1);
-  }
+}
+
 /* Start of Home page styling */
 #homeBody {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
         url(../media/hero-image.png);
-        background-size: cover;
-        background-position: center;    
-        position: relative;
-}   
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
 #titleHeader {
     flex-direction: column;
     width: 100vw;
@@ -133,37 +143,54 @@ nav a::after {
     background-color: rgba(000, 000, 000, 0.5);
     border-radius: 50px;
     border: solid 1px #fff;
+    transition: color 0.3s;
 }
+
 .pLink p {
-    color: white; 
+    color: white;
 }
+
+.pLink:hover {
+    border: solid 1px red;
+}
+
+.pLink:hover p {
+    color: red;
+}
+
 /* End of Home Page styling */
 
 /* Start of Rules page styling */
 #rulesBody {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
         url(../media/hero-image.png);
-        background-size: cover;
-        background-position: center;    
-        position: relative;}
-#rulesHeader{   
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#rulesHeader {
     font-size: 2.25rem;
     margin-top: 55px;
     padding: 0 25px;
     color: #fff;
 
 }
+
 #rules-content {
     padding: 0 25px;
     flex-wrap: wrap;
     color: #fff;
 }
+
 #rules-content li {
     list-style-type: none;
 }
+
 #rules-content li {
     color: #fff;
 }
+
 #rulesPageLinks {
     margin-top: 20px;
     padding-bottom: 25px;
@@ -171,21 +198,24 @@ nav a::after {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 /* Game Page */
 
 #game-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
         url(../media/background.png);
-        background-size: cover;
-        background-position: center;    
-        position: relative;}
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
-#player-cards img{
+#player-cards img {
     padding-top: 15px;
     height: 125px;
     width: 90px;
     margin: 1px;
 }
+
 #dealer-cards img {
     padding-top: 15px;
     height: 125px;
@@ -206,10 +236,10 @@ nav a::after {
 
 #player-container {
     padding-top: 15px;
-    text-align: center  ;
+    text-align: center;
 }
 
-.buttonSize{
+.buttonSize {
     width: 75px;
     height: 50px;
 }
@@ -217,11 +247,13 @@ nav a::after {
 #game-btns {
     padding-top: 15px;
 }
+
 #reset-game {
     margin-top: 25px;
     font-size: 1rem;
 
 }
+
 #results-container {
     background-color: #fff;
     width: 75px;
@@ -230,76 +262,94 @@ nav a::after {
     margin-top: 15px;
     border-radius: 50%;
 }
+
 #info-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
 }
+
 #myBtn {
     width: 75px;
     height: 50px;
     font-size: 1.5rem;
     margin-top: 15px;
 }
+
 /* code inspired from 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal' */
-/* code for the modal */ 
+/* code for the modal */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
-    z-index: 1; /* Sit on top of other elements */
+    z-index: 1;
+    /* Sit on top of other elements */
     padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; /* Enable scroll if needed */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #000000;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     color: #000;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 4.5rem;
     }
+
     h2 {
         font-size: 4rem;
     }
+
     h3 {
         font-size: 3.5rem;
     }
+
+    #homeCardImg {
+        display: none;
+    }
+    #pageLinks {
+        margin-top: 150px;
+    }
+
     #main-container {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
+
     #game-container {
         width: 70%;
     }
+
     #info-container {
         display: flex;
         flex-wrap: wrap;
@@ -308,36 +358,44 @@ nav a::after {
         margin-top: 150px;
         padding-right: 25px;
     }
-    #player-cards img{
+
+    #player-cards img {
         width: 125px;
         height: 200px;
     }
-    #dealer-cards img{
+
+    #dealer-cards img {
         width: 125px;
         height: 200px;
     }
-    .buttonSize{
+
+    .buttonSize {
         width: 100px;
         height: 75px;
     }
+
     #hit {
         font-size: 2rem;
     }
+
     #stay {
         font-size: 2rem;
     }
+
     #reset-game {
         font-size: 1.5rem;
         width: 125px;
         height: 75px;
         margin-top: 235px;
-        
+
     }
+
     #results-container {
         background-color: #fff;
         margin-top: 15px;
         font-size: 1.5rem;
     }
+
     #game-btns {
         display: flex;
         justify-content: center;
