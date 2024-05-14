@@ -193,12 +193,16 @@ nav a {
 }
 #reset-game {
     margin-top: 25px;
+    font-size: 1rem;
+
 }
 #results-container {
     background-color: #fff;
-    width: 125px;
+    width: 75px;
     height: 50px;
     text-align: center;
+    margin-top: 15px;
+    border-radius: 50%;
 }
 #info-container {
     width: 100%;
@@ -206,6 +210,51 @@ nav a {
     flex-wrap: wrap;
     flex-flow: column;
 }
+#myBtn {
+    width: 75px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+/* code inspired from 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal' */
+/* code for the modal */ 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top of other elements */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #000000;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #000;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     h1 {

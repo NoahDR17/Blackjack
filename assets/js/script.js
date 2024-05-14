@@ -201,3 +201,29 @@ function reduceAce(playerScore, playerAceCount) {
   return playerScore;
 }
 
+/* code inspired from 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal' */
+/* code for the modal */
+var modal = document.getElementById("rules-modal");
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, it will close
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let rulesModalLink = document.getElementById('rules-modal-link');
+rulesModalLink.addEventListener('click', function() {
+    modal.style.display = "block";
+})
