@@ -16,16 +16,16 @@ if (rulesLink !== null) {
 
 /* Game Page */
 document.addEventListener("DOMContentLoaded", function () {
-        createDeck();
-        shuffleDeck();
-        startGame();
+  createDeck();
+  shuffleDeck();
+  startGame();
 });
 
-var resetBtn = document.getElementById('reset-game');
+var resetBtn = document.getElementById("reset-game");
 
-resetBtn.addEventListener('click', function() {
-    window.location.reload();
-})
+resetBtn.addEventListener("click", function () {
+  window.location.reload();
+});
 
 /* Setting default score for player and dealer */
 let dealerScore = 0;
@@ -128,26 +128,6 @@ function hit() {
 }
 
 function stay() {
-  dealerScore = reduceAce(dealerScore, dealerAceCount);
-  playerScore = reduceAce(playerScore, playerAceCount);
-
-  canHit = false;
-
-  let message = "";
-
-  if (playerScore > 21) {
-      message = "You Lose";
-  } else if (dealerScore > 21) {
-      message = "You Win";
-  } else if (playerScore == dealerScore) {
-      message = "Tie";
-  } else if (playerScore > dealerScore) {
-      message = "You Win";
-  } else if (playerScore < dealerScore) {
-      message = "You Lose";
-  }
-  
-
   // while dealer score is less than 17, keep adding cards to dealer hand
   while (dealerScore < 17) {
     let cardImg = document.createElement("img");
@@ -162,6 +142,25 @@ function stay() {
   // Reveal the hidden dealer card
   let hiddenCardImg = document.getElementById("hidden");
   hiddenCardImg.src = "./assets/cards/" + hidden + ".png";
+
+  dealerScore = reduceAce(dealerScore, dealerAceCount);
+  playerScore = reduceAce(playerScore, playerAceCount);
+
+  canHit = false;
+
+  let message = "";
+
+  if (playerScore > 21) {
+    message = "You Lose";
+  } else if (dealerScore > 21) {
+    message = "You Win";
+  } else if (playerScore == dealerScore) {
+    message = "Tie";
+  } else if (playerScore > dealerScore) {
+    message = "You Win";
+  } else if (playerScore < dealerScore) {
+    message = "You Lose";
+  }
 
   // displaying dealer and player score after round ends
   document.getElementById("dealer-score").innerText = dealerScore;
@@ -181,7 +180,7 @@ function getValue(card) {
       return 11;
     }
     return 10;
-  } 
+  }
   return parseInt(value);
 }
 
@@ -208,22 +207,22 @@ var btn = document.getElementById("myBtn");
 
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+btn.onclick = function () {
   modal.style.display = "block";
-}
+};
 
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, it will close
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
-let rulesModalLink = document.getElementById('rules-modal-link');
-rulesModalLink.addEventListener('click', function() {
-    modal.style.display = "block";
-})
+let rulesModalLink = document.getElementById("rules-modal-link");
+rulesModalLink.addEventListener("click", function () {
+  modal.style.display = "block";
+});

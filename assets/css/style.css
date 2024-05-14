@@ -66,6 +66,32 @@ nav a {
     text-decoration: none;
     padding: 0 15px;
 }
+
+nav a:hover {
+    color: red;
+    font-style: bold;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    /* his line sets the width of the element to zero along the X-axis,
+   effectively hiding it initially */
+    transform: scaleX(0); 
+
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav a:hover::after {
+    visibility: visible;
+    /* gradually increases the width with the transition */
+    transform: scaleX(1);
+  }
 /* Start of Home page styling */
 #homeBody {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
