@@ -91,6 +91,7 @@ function startGame() {
   let cardImg = document.createElement("img");
   let card = deck.pop();
   cardImg.src = "./assets/cards/" + card + ".png";
+  cardImg.alt = "Dealers card";
   dealerScore += getValue(card);
   // checks if each card added is an ace card
   dealerAceCount += checkForAce(card);
@@ -101,6 +102,7 @@ function startGame() {
     let cardImg = document.createElement("img");
     let card = deck.pop();
     cardImg.src = "./assets/cards/" + card + ".png";
+    cardImg.alt = "Players card";
     playerScore += getValue(card);
     playerAceCount += checkForAce(card);
     document.getElementById("player-cards").append(cardImg);
@@ -117,6 +119,7 @@ function hit() {
   let cardImg = document.createElement("img");
   let card = deck.pop();
   cardImg.src = "./assets/cards/" + card + ".png";
+  cardImg.alt = "players card";
   playerScore += getValue(card);
   playerAceCount += checkForAce(card);
   document.getElementById("player-cards").append(cardImg);
@@ -133,6 +136,7 @@ function stay() {
     let cardImg = document.createElement("img");
     let card = deck.pop();
     cardImg.src = "./assets/cards/" + card + ".png";
+    cardImg.alt = "Dealers card";
     dealerScore += getValue(card);
     // checks if each card added is an ace card
     dealerAceCount += checkForAce(card);
