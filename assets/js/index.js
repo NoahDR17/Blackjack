@@ -78,7 +78,7 @@ function startGame() {
 
   let cardImg = document.createElement("img");
   let card = deck.pop();
-  cardImg.src = "../assets/cards/" + card + ".png";
+  cardImg.src = "./assets/cards/" + card + ".png";
   dealerScore += getValue(card);
   // checks if each card added is an ace card
   dealerAceCount += checkForAce(card);
@@ -88,7 +88,7 @@ function startGame() {
   for (let i = 0; i < 2; i++) {
     let cardImg = document.createElement("img");
     let card = deck.pop();
-    cardImg.src = "../assets/cards/" + card + ".png";
+    cardImg.src = "./assets/cards/" + card + ".png";
     playerScore += getValue(card);
     playerAceCount += checkForAce(card);
     document.getElementById("player-cards").append(cardImg);
@@ -104,7 +104,7 @@ function hit() {
   }
   let cardImg = document.createElement("img");
   let card = deck.pop();
-  cardImg.src = "../assets/cards/" + card + ".png";
+  cardImg.src = "./assets/cards/" + card + ".png";
   playerScore += getValue(card);
   playerAceCount += checkForAce(card);
   document.getElementById("player-cards").append(cardImg);
@@ -120,7 +120,7 @@ function stay() {
   while (dealerScore < 17) {
     let cardImg = document.createElement("img");
     let card = deck.pop();
-    cardImg.src = "../assets/cards/" + card + ".png";
+    cardImg.src = "./assets/cards/" + card + ".png";
     dealerScore += getValue(card);
     // checks if each card added is an ace card
     dealerAceCount += checkForAce(card);
@@ -129,7 +129,7 @@ function stay() {
 
   // Reveal the hidden dealer card
   let hiddenCardImg = document.getElementById("hidden");
-  hiddenCardImg.src = "../assets/cards/" + hidden + ".png";
+  hiddenCardImg.src = "./assets/cards/" + hidden + ".png";
 
   dealerScore = reduceAce(dealerScore, dealerAceCount);
   playerScore = reduceAce(playerScore, playerAceCount);
