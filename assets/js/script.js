@@ -16,9 +16,9 @@ if (rulesLink !== null) {
 
 /* Game Page */
 document.addEventListener("DOMContentLoaded", function () {
-  createDeck();
-  shuffleDeck();
-  startGame();
+        createDeck();
+        shuffleDeck();
+        startGame();
 });
 
 var resetBtn = document.getElementById('reset-game');
@@ -82,7 +82,6 @@ function shuffleDeck() {
   }
   console.log(deck);
 }
-
 function startGame() {
   // checks if hidden dealer card is an ace card
   hidden = deck.pop();
@@ -135,21 +134,19 @@ function stay() {
   canHit = false;
 
   let message = "";
+
   if (playerScore > 21) {
-    message = "You Lose";
+      message = "You Lose";
+  } else if (dealerScore > 21) {
+      message = "You Win";
+  } else if (playerScore == dealerScore) {
+      message = "Tie";
+  } else if (playerScore > dealerScore) {
+      message = "You Win";
+  } else if (playerScore < dealerScore) {
+      message = "You Lose";
   }
-  if (dealerScore > 21) {
-    message = "You Win";
-  }
-  if (playerScore == dealerScore) {
-    message = "Tie";
-  }
-  if (playerScore > dealerScore) {
-    message = "You Win";
-  }
-  if (playerScore < dealerScore) {
-    message = "You Lose";
-  }
+  
 
   // while dealer score is less than 17, keep adding cards to dealer hand
   while (dealerScore < 17) {
@@ -173,7 +170,7 @@ function stay() {
 }
 
 function getValue(card) {
-  let data = card.split("-"); // splits the array into two seperate values, '4-C' - '4', 'C'
+  let data = card.split("-"); // splits the array into two seperate values, '4-C' into '4', 'C'
   let value = data[0]; // specifies the first value '4'
 
   /* checks if value is not a number, if value is == to 'A' then returns 11,
@@ -184,7 +181,7 @@ function getValue(card) {
       return 11;
     }
     return 10;
-  }
+  } 
   return parseInt(value);
 }
 
@@ -203,3 +200,4 @@ function reduceAce(playerScore, playerAceCount) {
   }
   return playerScore;
 }
+

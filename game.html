@@ -22,33 +22,40 @@
             <a class="defaultTxt" href="game.html">Game</a>
         </nav>
     </header>
-    <div id="game-container" class="centerAlign">
-        <div id="dealer-container">
-            <h2>Dealer: <span id="dealer-score"></span></h2>
-            <div id="dealer-cards">
-                <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">
-            </div>
-        </div>
-
-        <div id="player-container">
-            <h2>Player: <span id="player-score"></span></h2>
-            <div id="player-cards">
+    <div id="main-container">
+        <div id="game-container" class="centerAlign">
+            <div id="dealer-container">
+                <h2>Dealer: <span id="dealer-score"></span></h2>
+                <div id="dealer-cards">
+                    <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">
+                </div>
             </div>
 
+            <div id="player-container">
+                <h2>Player: <span id="player-score"></span></h2>
+                <div id="player-cards">
+                </div>
+
+            </div>
+
         </div>
-        <div id="game-btns">
-            <button id="hit" class="buttonSize">Hit</button>
-            <button id="stay" class="buttonSize">Stay</button>
-        </div>
-        
-        <div>
+        <div id="info-container" class="centerAlign">
             <div>
+                <div id="game-btns">
+                    <button id="hit" class="buttonSize">Hit</button>
+                    <button id="stay" class="buttonSize">Stay</button>
+                </div>
+                <!--
                 <h3>Money:<span id="money-count"></span></h3>
+                <input type="number" id="bet-input" placeholder="Enter your bet amount">
+                <button onclick="placeBet()">Place Bet</button>
+                -->
             </div>
-            <p id="results"></p>
-            <button id="reset-game" class="buttonSize" >Reset Game</button>
+            <div id="results-container" class="centerAlign">
+                <p id="results"></p>
+            </div>
+            <button id="reset-game" class="buttonSize">Play Again</button>
         </div>
-
         <script src="/assets/js/script.js"></script>
     </div>
 </body>

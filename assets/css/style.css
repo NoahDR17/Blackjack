@@ -149,7 +149,7 @@ nav a {
 
 #game-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-        url(../media/background\ image.png);
+        url(../media/background.png);
         background-size: cover;
         background-position: center;    
         position: relative;}
@@ -193,4 +193,79 @@ nav a {
 }
 #reset-game {
     margin-top: 25px;
+}
+#results-container {
+    background-color: #fff;
+    width: 125px;
+    height: 50px;
+    text-align: center;
+}
+#info-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3.5rem;
+    }
+    #main-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #game-container {
+        width: 70%;
+    }
+    #info-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 30%;
+        margin-top: 150px;
+        padding-right: 25px;
+    }
+    #player-cards img{
+        width: 125px;
+        height: 200px;
+    }
+    #dealer-cards img{
+        width: 125px;
+        height: 200px;
+    }
+    .buttonSize{
+        width: 100px;
+        height: 75px;
+    }
+    #hit {
+        font-size: 2rem;
+    }
+    #stay {
+        font-size: 2rem;
+    }
+    #reset-game {
+        font-size: 1.5rem;
+        width: 125px;
+        height: 75px;
+        margin-top: 235px;
+        
+    }
+    #results-container {
+        background-color: #fff;
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+    #game-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
