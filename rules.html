@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io /apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io /favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io /favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io /site.webmanifest">
+    <title>Blackjack</title>
+</head>
+
+<body id="rulesBody">
+    <header>
+        <nav>
+            <a class="defaultTxt" href="index.html">Home</a>
+            <a class="defaultTxt" href="rules.html">Rules</a>
+            <a class="defaultTxt" href="game.html">Game</a>
+        </nav>
+    </header>
+    <main id="rulesMain">
+        <h1 id="rulesHeader">Welcome to the rules of blackjack!</h1>
+        <div id="rules-content">
+            <br>
+            <p>In blackjack, the objective is to beat the dealer's hand without going over 21.</p>
+
+            <br>
+            <p>Each card has a value:</p>
+            <ul>
+                <li>Cards 2 through 10 are worth their face value.</li>
+                <li>Face cards (Jack, Queen, King) are each worth 10 points.</li>
+                <li>Aces are worth either 1 or 11 points, depending on what's more advantageous for the player's
+                    hand.</li>
+            </ul>
+            <p>The game begins with each player, being dealt two cards. The dealer has one card face up and one card
+                face down.</p>
+            <br>
+            <p>Players then have the option to "hit" (receive another card from the dealer) or "stand" (keep their
+                current hand). If a player's hand value exceeds 21, they bust and lose the game.</p>
+            <br>
+            <p>Once all players have chosen to stand, the dealer reveals their face-down card and must hit until their
+                hand reaches a value of 17 or higher.</p>
+            <br>
+            <p>If the dealer busts, remaining players win. If neither busts, the one with the highest hand value wins.
+                In a tie, it's a push, and the player's bet is returned.</p>
+            <br>
+            <p>Special plays include:</p>
+            <ul>
+                <li>Split: If a player's first two cards are of the same value, they can split them into two separate
+                    hands.</li>
+                <li>Double Down: Players may double their original bet and receive one more card.</li>
+                <li>Insurance: Available when the dealer's face-up card is an Ace, it's a side bet that pays 2:1 if the
+                    dealer has a blackjack.</li>
+            </ul>
+            <br>
+            <p>A player gets a blackjack if their first two cards are an Ace and a 10-value card. They typically win 1.5
+                times their bet unless the dealer also has a blackjack, resulting in a push.</p>
+            <br>
+            <p>To win:</p>
+            <ul>
+                <li>Have a hand closer to 21 than the dealer's without exceeding it.</li>
+                <li>If the dealer's hand is closer to 21, the player loses their bet.</li>
+                <li>In case of a tie, the player's bet is returned.</li>
+            </ul>
+        </div>
+        <div id="rulesPageLinks" class="centerAlign">
+            <div id="game-link" class="pLink centerAlign">
+                <p>New Game</p>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
