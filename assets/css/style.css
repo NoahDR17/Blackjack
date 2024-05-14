@@ -214,12 +214,7 @@ nav a:hover::after {
 /* Game Page */
 
 #game-page {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-        url(../media/background.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    
+    background-color: #2f2f2f;
 }
 
 #player-cards img {
