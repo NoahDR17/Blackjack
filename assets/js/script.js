@@ -2,6 +2,7 @@
 or rules.html, which caused it to throw errors */
 var gameLink = document.getElementById("game-link");
 if (gameLink !== null) {
+  // Redirects to the game page when the game link is clicked
   gameLink.addEventListener("click", function () {
     window.location.href = "game.html";
   });
@@ -9,6 +10,7 @@ if (gameLink !== null) {
 
 var rulesLink = document.getElementById("rules-link");
 if (rulesLink !== null) {
+      // Redirects to the rules page when the rules link is clicked
   rulesLink.addEventListener("click", function () {
     window.location.href = "rules.html";
   });
@@ -16,6 +18,7 @@ if (rulesLink !== null) {
 
 /* Game Page */
 document.addEventListener("DOMContentLoaded", function () {
+    // Initializes the game by creating and shuffling the deck, and starting the game
   createDeck();
   shuffleDeck();
   startGame();
@@ -24,8 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 var resetBtn = document.getElementById("reset-game");
 
 resetBtn.addEventListener("click", function () {
+  // Reloads the page to reset the game
   window.location.reload();
-});
+}); 
 
 /* Setting default score for player and dealer */
 let dealerScore = 0;

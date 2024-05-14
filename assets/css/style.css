@@ -332,14 +332,15 @@ nav a:hover::after {
     h3 {
         font-size: 3.5rem;
     }
-
+    /* home page */
     #homeCardImg {
         display: none;
     }
     #pageLinks {
         margin-top: 150px;
     }
-
+    /* end of home page */
+    /* game page */
     #main-container {
         display: flex;
         flex-wrap: wrap;
@@ -401,4 +402,5 @@ nav a:hover::after {
         justify-content: center;
         align-items: center;
     }
+    /* end of game page */
 }
