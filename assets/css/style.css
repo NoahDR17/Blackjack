@@ -30,6 +30,11 @@
     justify-content: center;
 }
 
+.activeLink {
+    color: red;
+    font-size: 1.5rem;
+}
+
 /* Body */
 body {
     display: flex;
@@ -83,10 +88,6 @@ nav a {
     padding: 0 15px;
 }
 
-nav a:hover {
-    color: red;
-}   
-
 nav a::after {
     content: '';
     position: absolute;
@@ -124,7 +125,9 @@ nav a:hover::after {
     height: 100px;
     margin-top: 125px;
 }
-
+#luck-h2 {
+    color: red;
+}
 #homeCards {
     width: 100%;
     flex-direction: row;
@@ -162,9 +165,6 @@ nav a:hover::after {
     border: solid 1px red;
 }
 
-.pLink:hover p {
-    color: red;
-}
 
 /* End of Home Page styling */
 
@@ -268,7 +268,7 @@ nav a:hover::after {
     height: 50px;
     text-align: center;
     margin-top: 15px;
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
 #info-container {
@@ -401,7 +401,6 @@ nav a:hover::after {
     }
 
     #results-container {
-        background-color: #fff;
         margin-top: 15px;
         font-size: 1.5rem;
     }
