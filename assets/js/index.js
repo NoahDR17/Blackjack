@@ -1,16 +1,14 @@
 /* Game Page */
 document.addEventListener("DOMContentLoaded", function () {
     // Initializes the game by creating and shuffling the deck, and starting the game
-  createDeck();
-  shuffleDeck();
-  startGame();
+  resetGame();
 });
 
 var resetBtn = document.getElementById("reset-game");
 if (resetBtn !== null) {
     resetBtn.addEventListener("click", function () {
         // Reloads the page to reset the game
-        window.location.reload();
+        resetGame();
       }); 
 }
 
@@ -29,6 +27,22 @@ let deck;
 
 /* variable for hidden card */
 let hidden;
+function resetGame() {
+    dealerScore = 0;
+    playerScore = 0;
+    dealerAceCount = 0;
+    playerAceCount = 0;
+    canHit = true;
+    document.getElementById('dealer-cards').innerHTML = `
+    <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">`
+    document.getElementById('player-cards').innerHTML = ''
+    document.getElementById("dealer-score").innerText = '';
+    document.getElementById("player-score").innerText = '';
+    document.getElementById("results").innerText = 'Result';
+    createDeck();
+    shuffleDeck();
+    startGame();
+}
 /**
  * creates a deck of 52 cards combining values and suits
  */
@@ -55,7 +69,6 @@ function createDeck() {
       deck.push(cardValue[y] + "-" + cardSuit[x]);
     }
   }
-  console.log(deck);
 }
 
 /**
@@ -68,7 +81,6 @@ function shuffleDeck() {
     deck[i] = deck[j];
     deck[j] = temp;
   }
-  console.log(deck);
 }
 function startGame() {
   // checks if hidden dealer card is an ace card

@@ -12,3 +12,14 @@ fixed by adding a modal pop up of the rules instead of taking you to the rules p
 moved all js code for game page into a new index.js file, so that when calling for a get element by id it 
 doesnt throw a null error because page is open on a html document that doesnt contain those id's, like 
 rules page and the home page.
+
+add function for reset game instead of just refreshing page, 
+errors
+scores wouldnt reset, result would reset.
+player would be dealt two cards evrey time resetgame was called, because in that func is start game, which 
+deals the players two starting cards, fix was to set the html of the player-cards div to empty again, because
+while the javascript values may have reset the html dom hadnt, meaning the previously appended images from old
+rounds where still inside the dealer/player-cards 
+to fix scores and result i jusst set their values to 0 again inside the resetGame func 
+
+why make reset game func? 
