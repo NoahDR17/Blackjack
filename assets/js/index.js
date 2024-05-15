@@ -159,7 +159,7 @@ function stay() {
   let message = "";
 
   if (playerScore > 21) {
-    message = "You Lose";
+    message = "You've Bust";
   } else if (dealerScore > 21) {
     message = "You Win";
   } else if (playerScore == dealerScore) {
