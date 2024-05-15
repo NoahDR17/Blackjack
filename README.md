@@ -359,6 +359,6 @@ All other content is owned and created by Noah Davis Reynolds
 
 ### Media
 Images used for deck of cards were sourced from [source](https://boardgames.stackexchange.com/questions/51426/where-can-i-download-high-quality-images-of-poker-cards)
-[Deck of Cards Source](docs/readme-images/deck-source.png)
+![Deck of Cards Source](docs/readme-images/deck-source.png)
 
 Images sourced from [Pexels](https://www.pexels.com/)
