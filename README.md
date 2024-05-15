@@ -6,6 +6,21 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
 
 [Blackjack Live Link](https://noahdr17.github.io/Blackjack/)
 
+## Project Goals:
+
+- Create a quality website adhering to industry standards and best practises.
+- Create something that not only is functional and well made, but also visually appealing and utilizes smart design thinking to give the user a positive experience.
+- Gain experience creating something without any external help/guides.
+- Develop and practise my skills in JavaScript.
+
+## Target Audience
+
+- The Blackjack website welcomes anyone aged 18 or over to "Test their luck" against the custom made Blackjack game. It's general purpose is to provide entertainment to its users leaving them with a positive outlook over their experience.
+
+## Theme
+
+- The theme of the website will be positive, and entertaining, following a simplistic yet cohesive colour scheme and structure, with colours contrasting with relation to importance, this is a method used to draw users attention.
+
 ## Features
 
 ### Site wide
@@ -17,7 +32,7 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
         * Game Page
     * Responsive on all devices.
     * Allows users to easily navigate between pages on the site.
-    * Features a hover affect to inform user when they are hovering over a nav link.
+    * Features a hover effect to inform user when they are hovering over a nav link.
     * The link that is for the page you are currently on will be red instead of white, to provide an extra indication to the user for which page they are on.
 
 ![Navbar Image](docs/readme-images/navbar.png)
@@ -56,7 +71,7 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
 
 * Game Page
 
-![Game Page](docs/readme-images/game-page.png)
+![Game Page](docs/readme-images/game.png)
 
 * The Game page contains the blackjack game itself, it contains:
     * Players hand
@@ -66,21 +81,20 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
     ![Game Cards](docs/readme-images/dealers-players-cards.png)
         
     * Hit/Stay Buttons
-        * determines whether the player is dealt another card or if the round ends.
+        * Determines whether the player is dealt another card or if the round ends.
     * Play Again button
         * Starts the game again.
-    ![Game Buttons](docs/readme-images/game-buttons.png)
-    ![Game lost](docs/readme-images/game-end-lost.png)
+    ![Game Buttons](docs/readme-images/game-btn.png)
     * Rules Pop up button
         * Creates a pop up which displays the game instructions, instead of taking you to the rules page, which would reset the game status.
         * On mobile screen sizes the pop up will display at 100% width to give the text more space to take up, this lets the user not have to scroll so far down to read it all.
     ![Game Rules PopUp](docs/readme-images/rules-modal-popup.png)
     ![Game Rules PopUp Mobile](docs/readme-images/modal-full-width-mobile.png)
     * Result information box
-        * contains the information stating whether or not the player has won, lost, or tied with the dealer.
-    ![Game Result Bust](docs/readme-images/bust.png)
-    ![Game Result Win](docs/readme-images/results-win.png)
-    ![Game Result Lose](docs/readme-images/results-lose.png)
+        * Contains the information stating whether or not the player has won, lost, or tied with the dealer.
+    ![Game Result Bust](docs/readme-images/result-bust.png)
+    ![Game Result Win](docs/readme-images/result-win.png)
+    ![Game Result Lose](docs/readme-images/result-lose.png)
 
 
 
@@ -89,6 +103,10 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
     * Betting system.
     * Tally for how many times player or dealer has won.
     * Different types of card decks for customisability.
+    * Checks to see if user has gotten blackjack.
+    * Split hand function.
+    * Double function.
+    * Insurance function.
 
 ## Wireframe 
 * Whole Wireframe
@@ -128,8 +146,7 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
   - Favicon used in website, imported from https://favicon.io/
 - Figma
   - Wireframes were made through https://www.figma.com/
-- Pexels
-  - Images sourced from https://www.pexels.com/
+
 
 ## Testing 
 
@@ -154,14 +171,14 @@ All pages have been tested for responsivesness from 320px in Chrome developer to
 - Actual outcome: 
   - website behaved as expected
 
-  - When opening the webpage through the safari app on an apple mobile phone, the colour of any text inside of buttons was blue, bug left unfixed as i could not find the solution.
+  - When opening the webpage through the safari app on an apple mobile phone, the colour of any text inside of buttons was blue, bug left unfixed as I could not find the solution.
   ![Button Issue](docs/readme-images/blue-button.png)
 
 Website was also tested using Iphone SE, Ipad mini, air and pro, macbook air, and Galaxy fold.
 
 ### Accessibility
 
-To test for accessibility i utilised the site, [Wave Accessibility](https://wave.webaim.org/)
+To test for accessibility I utilised the site, [Wave Accessibility](https://wave.webaim.org/)
 
 - The testing was carried out to ensure these criteria are met:
   - colour contrast meets the specified criterea following the [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
@@ -187,7 +204,7 @@ To test for accessibility i utilised the site, [Wave Accessibility](https://wave
         * A title tag to set the page title.
 
 * Body Section:
-    * The body tag includes an id attribute for identification and styling. A header tag contains the navigation links. The navigation links are inside a nav tag and use a tags with appropriate classes.
+    * The body tag includes an id attribute for identification and styling. A header tag contains the navigation links. The navigation links are inside a nav tag and use anchor tags with appropriate classes.
 
 * Main Content:
     * The main content is wrapped inside a main tag with an id attribute. The title and subtitle are enclosed in a div with appropriate classes and use h1 and h2 tags. Images of cards are displayed within a div using img tags with appropriate classes, src, and alt attributes. Navigation links to "New Game" and "Rules" are included in a div with appropriate IDs and classes, structured with nested div and p tags.
@@ -241,10 +258,10 @@ To test for accessibility i utilised the site, [Wave Accessibility](https://wave
 
 ### Errors Found in Accessibility Testing 
 
-* There was no alt text description for the card images being dealt, as i was creating them in the javascript, and had forgot to add it into code.
+* There was no alt text description for the card images being dealt, as I was creating them in the javascript, and had forgot to add it into code.
     * Fix: "cardImg.alt = "Dealers card";"
         * This in the same way i added the src to the images, adds an alt description to the images being made.
-    * This removed the error but created an alert, which stated that i had multiple images with the same alt description, "Dealers card" or "Players card", the only way i thought of to potentially fix this was by creating a function which checked the suit and value of each card popped out of the array and added into the src for the image, and based on its suit and value to have the alt description be a string combined with a variable which would hold that cards value and suit. However since this was only an alert and not an actual errror, i left it as is.
+    * This removed the error but created an alert, which stated that I had multiple images with the same alt description, "Dealers card" or "Players card", the only way I thought of to potentially fix this was by creating a function which checked the suit and value of each card popped out of the array and added into the src for the image, and based on its suit and value to have the alt description be a string combined with a variable which would hold that cards value and suit. However since this was only an alert and not an actual errror, I left it as is.
 
 * No other errors found in Wave Accessibility testing.
 
@@ -253,7 +270,6 @@ To test for accessibility i utilised the site, [Wave Accessibility](https://wave
 - Navigation Bar
   - Testing was done by clicking each nav link on each page and ensuring they navigated to the correct link.
   
-
 - Initial Load and UI Elements
     - Test: Verify that all UI elements (buttons, score displays, card images) load correctly.
     - How: Open the game in various browsers and check if all elements are visible and correctly   positioned.
@@ -305,9 +321,6 @@ To test for accessibility i utilised the site, [Wave Accessibility](https://wave
     - How: Open the modal by clicking the link, check the content, and close it using the provided close button, or the optional click anywhere outside of the screen to close.
     - Result: Everything worked as expected, noticed that on smaller screen sizes there was alot of scrolling to read all the rules information, to fix this i made the width of the modal pop up 100% of the screen on smaller devices.
 
-
-
-
 Expected Outcome:
 After clicking a link, the user should be correctly navigated to the location of the link with no errors occuring.
 
@@ -317,15 +330,15 @@ Actual outcome: website behaved as expected, correctly navigating the user based
 
 - HTML: 
     - Any errors shown in validator where fixed until code returned no more errors when passed through.
-    ![HTML Validated](docs/readme-images/html-validated.png) !
+    ![HTML Validated](docs/readme-images/html-validated.png)
 
 - CSS: 
     - Any errors shown in validator where fixed until code returned no more errors when passed through.
     ![CSS Validated](docs/readme-images/css-validated.png)
 
 - JavaScript: 
-    - No errors shown in validator
-    - Only warnings for using let as a declaration for variables
+    - No errors shown in validator.
+    - Only warnings for using let as a declaration for variables.
     ![script.js Validated](docs/readme-images/script-validated.png) 
     ![index.js Validated](docs/readme-images/index-validated.png)
 
@@ -333,7 +346,7 @@ Actual outcome: website behaved as expected, correctly navigating the user based
 ### Version Control
 
 Site created using Visual Studio Code IDE.
-Pushed to a GitHub repository called "Blackjack"
+Pushed to a GitHub repository called "Blackjack".
 
 - These commands can be used to push code to a repository.
   - `git add <file>`
@@ -344,9 +357,9 @@ Pushed to a GitHub repository called "Blackjack"
 
 - The steps to Deploy to GitHub pages are as follows:
   - Open the Github repo.
-  - navigate to settings.
-  - select 'pages'.
-  - select the main/master branch in the source section.
+  - Navigate to settings.
+  - Select 'pages'.
+  - Select the main/master branch in the source section.
   - Click save.
   - A live link will be Displayed shortly after.
 
@@ -359,7 +372,7 @@ The modal pop up in the Game Page follows the guidance given from [w3schools](ht
 
 
 ### Content
-All other content is other than stated in the credits section is owned and created by Noah Davis Reynolds
+All other content is other than stated in the credits section is owned and created by Noah Davis Reynolds.
 
 ### Media
 Images used for deck of cards were sourced from [source](https://boardgames.stackexchange.com/questions/51426/where-can-i-download-high-quality-images-of-poker-cards)
