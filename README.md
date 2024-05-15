@@ -252,7 +252,7 @@ To test for accessibility i utilised the site, [Wave Accessibility](https://wave
 
 - Navigation Bar
   - Testing was done by clicking each nav link on each page and ensuring they navigated to the correct link.
-  - Result: Everything worked as expected.
+  
 
 - Initial Load and UI Elements
     - Test: Verify that all UI elements (buttons, score displays, card images) load correctly.
