@@ -38,7 +38,11 @@ function resetGame() {
     document.getElementById('player-cards').innerHTML = ''
     document.getElementById("dealer-score").innerText = '';
     document.getElementById("player-score").innerText = '';
-    document.getElementById("results").innerText = 'Result';
+    document.getElementById("results").innerText = '';
+    document.getElementById('hit').disabled = false;
+    document.getElementById('stay').disabled = false;
+
+
     createDeck();
     shuffleDeck();
     startGame();
@@ -159,7 +163,7 @@ function stay() {
   let message = "";
 
   if (playerScore > 21) {
-    message = "You've Bust";
+    message = "Bust";
   } else if (dealerScore > 21) {
     message = "You Win";
   } else if (playerScore == dealerScore) {
@@ -169,6 +173,10 @@ function stay() {
   } else if (playerScore < dealerScore) {
     message = "You Lose";
   }
+
+  document.getElementById('hit').disabled = true
+  document.getElementById('stay').disabled = true;
+
 
   // displaying dealer and player score after round ends
   document.getElementById("dealer-score").innerText = dealerScore;

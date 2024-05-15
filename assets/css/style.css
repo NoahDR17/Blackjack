@@ -264,13 +264,17 @@ nav a:hover::after {
 }
 
 #results-container {
-    background-color: #fff;
+    background-color: transparent;
+    color: #fff;
     width: 75px;
     height: 50px;
     text-align: center;
     margin-top: 15px;
     border-radius: 15px;
-    border: 1px solid red;
+}
+#results-container p {
+    font-size: 1.5rem;
+    width: 100%;
 }
 
 #info-container {
@@ -283,9 +287,7 @@ nav a:hover::after {
 #myBtn {
     width: 75px;
     height: 50px;
-    font-size: 1.5rem;
     border-radius: 10px;
-    padding-bottom: 5px;
 }
 
 /* code inspired from 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal' */
@@ -440,7 +442,6 @@ nav a:hover::after {
     }
 
     #reset-game {
-        font-size: 1.25rem;
         width: 100px;
         height: 50px;
         flex-wrap: wrap;
@@ -448,8 +449,14 @@ nav a:hover::after {
 
 
     #results-container {
+        color: #fff;
         margin-top: 15px;
-        font-size: 1.5rem;
+        font-size: 3rem;
+        width: 200px;
+        height: 100px;
+    }
+    #results-container p{
+        font-size: 2.5rem;
     }
 
     #game-btns {
