@@ -23,3 +23,10 @@ rounds where still inside the dealer/player-cards
 to fix scores and result i jusst set their values to 0 again inside the resetGame func 
 
 why make reset game func? 
+
+
+asset paths in index and game are different ./assets/ vs assets/
+
+should not have to click stay when bust
+
+rules text is duplicated
