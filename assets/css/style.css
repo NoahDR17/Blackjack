@@ -443,7 +443,6 @@ nav a:hover::after {
         width: 100px;
         height: 50px;
         flex-wrap: wrap;
-        flex-grow: 50%;
     }
 
 
