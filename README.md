@@ -91,6 +91,20 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
     * Different types of card decks for customisability.
 
 ## Wireframe 
+* Whole Wireframe
+    ![Whole Wireframe](docs/readme-images/wireframe-all.png)
+
+* Home Page 
+    ![Home Page Wireframe](docs/readme-images/wireframe-home.png)
+
+* Rules Page 
+    ![Rules Page Wireframe](docs/readme-images/wireframe-rules.png)
+
+* Game Page 
+    ![Game Page Wireframe](docs/readme-images/wireframe-game.png)
+
+* 404 Page
+        ![404 Page Wireframe](docs/readme-images/wireframe-error.png)
 
 ## Technologies Used
 
