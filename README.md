@@ -53,7 +53,7 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
 * Home Page 
     * Will contain a heading to describe the purpose of the website.
     * Will contain links to allow the user to navigate through the website.
-    * Features two prompts for the user to either go to the rules page, or the game page, they will have a discreet hover affect to promote a positive user experience.
+    * Features two prompts for the user to either go to the rules page, or the game page, they will have a discreet hover effect to promote a positive user experience.
 
 ![Home Page](docs/readme-images/home-page.png)
 ![Heading Image](docs/readme-images/home-title.png)
@@ -252,15 +252,16 @@ To test for accessibility I utilised the site, [Wave Accessibility](https://wave
 
 * Game Interaction Elements:
     * Buttons for game actions (Hit, Stay, Play Again, Rules) are included with appropriate IDs and classes. The modal for game rules is implemented using a combination of div elements and appropriate classes for styling and behavior.
+    * Hit and Stay buttons become disabled when stay function has been called.
 
 * Script Inclusion:
     * The JavaScript file is included at the end of the body, which is a best practice to ensure  the HTML content loads before any scripts run.
 
 ### Errors Found in Accessibility Testing 
 
-* There was no alt text description for the card images being dealt, as I was creating them in the javascript, and had forgot to add it into code.
+* There was no alt text description for the card images being dealt, as I was creating them in the javascript, and had forgotten to add it into code.
     * Fix: "cardImg.alt = "Dealers card";"
-        * This in the same way i added the src to the images, adds an alt description to the images being made.
+        * This in the same way I added the src to the images, adds an alt description to the images being made.
     * This removed the error but created an alert, which stated that I had multiple images with the same alt description, "Dealers card" or "Players card", the only way I thought of to potentially fix this was by creating a function which checked the suit and value of each card popped out of the array and added into the src for the image, and based on its suit and value to have the alt description be a string combined with a variable which would hold that cards value and suit. However since this was only an alert and not an actual errror, I left it as is.
 
 * No other errors found in Wave Accessibility testing.
@@ -319,7 +320,7 @@ To test for accessibility I utilised the site, [Wave Accessibility](https://wave
 - Modal Windows
     - Test: Verify that modal windows (e.g., rules) open and close correctly.
     - How: Open the modal by clicking the link, check the content, and close it using the provided close button, or the optional click anywhere outside of the screen to close.
-    - Result: Everything worked as expected, noticed that on smaller screen sizes there was alot of scrolling to read all the rules information, to fix this i made the width of the modal pop up 100% of the screen on smaller devices.
+    - Result: Everything worked as expected, noticed that on smaller screen sizes there was alot of scrolling to read all the rules information, to fix this I made the width of the modal pop up 100% of the screen on smaller devices.
 
 Expected Outcome:
 After clicking a link, the user should be correctly navigated to the location of the link with no errors occuring.
