@@ -351,7 +351,7 @@ Pushed to a GitHub repository called "Blackjack"
   - A live link will be Displayed shortly after.
 
 ## Credits
-
+The modal pop up in the Game Page follows the guidance given from [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal) heavily.
 
 ### Content
 
