@@ -1,17 +1,14 @@
 /* Game Page */
 document.addEventListener("DOMContentLoaded", function () {
-    // Initializes the game by creating and shuffling the deck, and starting the game
+  // Initializes the game by creating and shuffling the deck, and starting the game
   resetGame();
 });
 
 var resetBtn = document.getElementById("reset-game");
-if (resetBtn !== null) {
-    resetBtn.addEventListener("click", function () {
-        // Reloads the page to reset the game
-        resetGame();
-      }); 
-}
-
+resetBtn.addEventListener("click", function () {
+  // Reloads the page to reset the game
+  resetGame();
+});
 
 /* Setting default score for player and dealer */
 let dealerScore = 0;
@@ -28,24 +25,23 @@ let deck;
 /* variable for hidden card */
 let hidden;
 function resetGame() {
-    dealerScore = 0;
-    playerScore = 0;
-    dealerAceCount = 0;
-    playerAceCount = 0;
-    canHit = true;
-    document.getElementById('dealer-cards').innerHTML = `
-    <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">`
-    document.getElementById('player-cards').innerHTML = ''
-    document.getElementById("dealer-score").innerText = '';
-    document.getElementById("player-score").innerText = '';
-    document.getElementById("results").innerText = '';
-    document.getElementById('hit').disabled = false;
-    document.getElementById('stay').disabled = false;
+  dealerScore = 0;
+  playerScore = 0;
+  dealerAceCount = 0;
+  playerAceCount = 0;
+  canHit = true;
+  document.getElementById("dealer-cards").innerHTML = `
+    <img id="hidden" src="./assets/cards/Back.png" alt="hidden card">`;
+  document.getElementById("player-cards").innerHTML = "";
+  document.getElementById("dealer-score").innerText = "";
+  document.getElementById("player-score").innerText = "";
+  document.getElementById("results").innerText = "";
+  document.getElementById("hit").disabled = false;
+  document.getElementById("stay").disabled = false;
 
-
-    createDeck();
-    shuffleDeck();
-    startGame();
+  createDeck();
+  shuffleDeck();
+  startGame();
 }
 /**
  * creates a deck of 52 cards combining values and suits
@@ -114,7 +110,6 @@ function startGame() {
   // calls the hit, and stay functions when their associated buttons are pressed
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
-  
 }
 function hit() {
   // checks if can hit is true or false, if false function ends.
@@ -134,7 +129,7 @@ function hit() {
     canHit = false;
   }
   if (playerScore > 21) {
-    stay()
+    stay();
   }
 }
 
@@ -174,9 +169,8 @@ function stay() {
     message = "You Lose";
   }
 
-  document.getElementById('hit').disabled = true
-  document.getElementById('stay').disabled = true;
-
+  document.getElementById("hit").disabled = true;
+  document.getElementById("stay").disabled = true;
 
   // displaying dealer and player score after round ends
   document.getElementById("dealer-score").innerText = dealerScore;
