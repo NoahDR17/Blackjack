@@ -110,6 +110,7 @@ function startGame() {
   // calls the hit, and stay functions when their associated buttons are pressed
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
+  
 }
 function hit() {
   // checks if can hit is true or false, if false function ends.
@@ -127,6 +128,9 @@ function hit() {
   // if the player score is still over 21 after reducing any ace values than canHit becomes false.
   if (reduceAce(playerScore, playerAceCount) > 21) {
     canHit = false;
+  }
+  if (playerScore > 21) {
+    stay()
   }
 }
 

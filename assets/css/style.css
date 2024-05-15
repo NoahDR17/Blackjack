@@ -269,6 +269,7 @@ nav a:hover::after {
     text-align: center;
     margin-top: 15px;
     border-radius: 15px;
+    border: 1px solid red;
 }
 
 #info-container {
@@ -282,8 +283,8 @@ nav a:hover::after {
     width: 75px;
     height: 50px;
     font-size: 1.5rem;
-    margin-top: 15px;
     border-radius: 10px;
+    padding-bottom: 5px;
 }
 
 /* code inspired from 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal' */
@@ -307,9 +308,9 @@ nav a:hover::after {
 .modal-content {
     background-color: #000000;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
-    width: 80%;
+    width: 100%;
     color: #000;
 }
 
@@ -327,7 +328,7 @@ nav a:hover::after {
     text-decoration: none;
     cursor: pointer;
 }
-@media screen and (min-width: 425px) {
+@media screen and (orientation: landscape) {
     h1 {
         font-size: 4rem;
     }
@@ -338,6 +339,14 @@ nav a:hover::after {
 
     h3 {
         font-size: 3rem;
+    }
+    .modal-content {
+        background-color: #000000;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 90%;
+        color: #000;
     }
     .homeCardImg {
         display: none;
@@ -430,12 +439,13 @@ nav a:hover::after {
     }
 
     #reset-game {
-        font-size: 1.5rem;
-        width: 125px;
-        height: 75px;
-        margin-top: 235px;
-
+        font-size: 1.25rem;
+        width: 100px;
+        height: 50px;
+        flex-wrap: wrap;
+        flex-grow: 50%;
     }
+
 
     #results-container {
         margin-top: 15px;
