@@ -352,10 +352,14 @@ Pushed to a GitHub repository called "Blackjack"
 
 ## Credits
 The modal pop up in the Game Page follows the guidance given from [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal) heavily.
+![Modal Code Images](docs/readme-images/modal3.png)
+![Modal Code Images](docs/readme-images/modal2.png)
+![Modal Code Images](docs/readme-images/modal1.png)
+
+
 
 ### Content
-
-All other content is owned and created by Noah Davis Reynolds
+All other content is other than stated in the credits section is owned and created by Noah Davis Reynolds
 
 ### Media
 Images used for deck of cards were sourced from [source](https://boardgames.stackexchange.com/questions/51426/where-can-i-download-high-quality-images-of-poker-cards)
