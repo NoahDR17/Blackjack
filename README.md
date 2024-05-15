@@ -56,40 +56,39 @@ Blackjack is a game designed to bring the excitement of classic blackjack to you
 
 * Game Page
 
+![Game Page](docs/readme-images/game-page.png)
+
 * The Game page contains the blackjack game itself, it contains:
     * Players hand
         * The player is dealt two cards at the beginning of every round.
     * Dealers hand 
         * The Dealer is dealt one card face up, and one card face down at the beginning of every round, the card that is face down is only revealed when the player has either gone bust (exceeded 21 points), or hit the stay button, at which point the game will check to see who has won.
+    ![Game Cards](docs/readme-images/dealers-players-cards.png)
+        
     * Hit/Stay Buttons
         * determines whether the player is dealt another card or if the round ends.
     * Play Again button
         * Starts the game again.
+    ![Game Buttons](docs/readme-images/game-buttons.png)
+    ![Game lost](docs/readme-images/game-end-lost.png)
     * Rules Pop up button
         * Creates a pop up which displays the game instructions, instead of taking you to the rules page, which would reset the game status.
         * On mobile screen sizes the pop up will display at 100% width to give the text more space to take up, this lets the user not have to scroll so far down to read it all.
+    ![Game Rules PopUp](docs/readme-images/rules-modal-popup.png)
+    ![Game Rules PopUp Mobile](docs/readme-images/modal-full-width-mobile.png)
     * Result information box
         * contains the information stating whether or not the player has won, lost, or tied with the dealer.
-
-![Game Page](docs/readme-images/game-page.png)
-![Game Cards](docs/readme-images/dealers-players-cards.png)
-![Game Buttons](docs/readme-images/game-buttons.png)
-![Game lost](docs/readme-images/game-end-lost.png)
-![Game Result Bust](docs/readme-images/bust.png)
-![Game Result Win](docs/readme-images/results-win.png)
-![Game Result Lose](docs/readme-images/results-lose.png)
-![Game Rules PopUp](docs/readme-images/rules-modal-popup.png)
-![Game Rules PopUp Mobile](docs/readme-images/modal-full-width-mobile.png)
-
-
-
-
-
-
+    ![Game Result Bust](docs/readme-images/bust.png)
+    ![Game Result Win](docs/readme-images/results-win.png)
+    ![Game Result Lose](docs/readme-images/results-lose.png)
 
 
 
 ### Potential future feature implementations
+* Future implementations:
+    * Betting system.
+    * Tally for how many times player or dealer has won.
+    * Different types of card decks for customisability.
 
 ## Wireframe 
 
