@@ -321,7 +321,7 @@ Actual outcome: website behaved as expected, correctly navigating the user based
 
 - CSS: 
     - Any errors shown in validator where fixed until code returned no more errors when passed through.
-    [CSS Validated](docs/readme-images/css-validated.png)
+    ![CSS Validated](docs/readme-images/css-validated.png)
 
 - JavaScript: 
     - No errors shown in validator
