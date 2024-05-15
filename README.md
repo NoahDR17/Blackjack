@@ -174,70 +174,70 @@ To test for accessibility i utilised the site, [Wave Accessibility](https://wave
 ### Home Page
 
 * DOCTYPE Declaration:
-    * The document starts with the correct <!DOCTYPE html> declaration for HTML5.
+    * The document starts with the correct DOCTYPE html declaration for HTML5.
 
 * HTML Element: 
-    * The <html> tag includes the lang attribute, which is set to "en" (English).
+    * The html tag includes the lang attribute, which is set to "en" (English).
 
 * Head Section:
-    * The <head> section includes:
+    * The head section includes:
         * Meta tags for character set and viewport settings.
         * A link to the CSS file.
         * Links to various favicon files.
-        * A <title> tag to set the page title.
+        * A title tag to set the page title.
 
 * Body Section:
-    * The <body> tag includes an id attribute for identification and styling. A <header> tag contains the navigation links. The navigation links are inside a <nav> tag and use <a> tags with appropriate classes.
+    * The body tag includes an id attribute for identification and styling. A header tag contains the navigation links. The navigation links are inside a nav tag and use a tags with appropriate classes.
 
 * Main Content:
-    * The main content is wrapped inside a <main> tag with an id attribute. The title and subtitle are enclosed in a <div> with appropriate classes and use <h1> and <h2> tags. Images of cards are displayed within a <div> using <img> tags with appropriate classes, src, and alt attributes. Navigation links to "New Game" and "Rules" are included in a <div> with appropriate IDs and classes, structured with nested <div> and <p> tags.
+    * The main content is wrapped inside a main tag with an id attribute. The title and subtitle are enclosed in a div with appropriate classes and use h1 and h2 tags. Images of cards are displayed within a div using img tags with appropriate classes, src, and alt attributes. Navigation links to "New Game" and "Rules" are included in a div with appropriate IDs and classes, structured with nested div and p tags.
 
 * Script Inclusion:
-    * The JavaScript file is included at the end of the <body>, which ensures the HTML content loads before any scripts run.
+    * The JavaScript file is included at the end of the body, which ensures the HTML content loads before any scripts run.
 
 ### Rules Page 
 * DOCTYPE Declaration:
-    * The document starts with the correct <!DOCTYPE html> declaration for HTML5.
+    * The document starts with the correct !DOCTYPE html declaration for HTML5.
 
 * HTML Element:
-    * The <html> tag includes the lang attribute, which is set to "en" (English).
+    * The html tag includes the lang attribute, which is set to "en" (English).
 
 * Head Section:
-    * The <head> section includes meta tags for character set and viewport settings. Links to the CSS file and various favicons are correctly included. The <title> tag is properly used to set the page title.
+    * The head section includes meta tags for character set and viewport settings. Links to the CSS file and various favicons are correctly included. The title tag is properly used to set the page title.
 
 * Body Section:
-    * The <body> tag has an id attribute for identification and styling. A <header> tag is used to contain the navigation links, which is semantically appropriate. Navigation links are inside a <nav> tag, which is correct.
+    * The body tag has an id attribute for identification and styling. A header tag is used to contain the navigation links, which is semantically appropriate. Navigation links are inside a nav tag, which is correct.
 
 * Main Content:
-    * The main content is wrapped inside a <main> tag, which is the correct semantic element for the main content of the page. The <h1> tag is used for the main heading of the rules page. The content of the rules is enclosed in a <div> with an appropriate ID. The rules are structured with paragraphs (<p>) and lists (<ul>) for clarity.
+    * The main content is wrapped inside a main tag, which is the correct semantic element for the main content of the page. The h1 tag is used for the main heading of the rules page. The content of the rules is enclosed in a div with an appropriate ID. The rules are structured with paragraphs (p) and lists (ul) for clarity.
 
 * Additional Elements:
-    * A <div> with the class centerAlign contains a link to start a new game. The link is enclosed in a <div> with appropriate IDs and classes for styling.
+    * A div with the class centerAlign contains a link to start a new game. The link is enclosed in a div with appropriate IDs and classes for styling.
 
 * Script Inclusion:
-    * The JavaScript file is included at the end of the <body>, which is a best practice to ensure the HTML content loads before any scripts run.
+    * The JavaScript file is included at the end of the body, which is a best practice to ensure the HTML content loads before any scripts run.
 
 ### Game Page
 * DOCTYPE Declaration:
-    * The document starts with the correct <!DOCTYPE html> declaration for HTML5.
+    * The document starts with the correct DOCTYPE html declaration for HTML5.
 
 * HTML Element:
-    * The <html> tag includes the lang attribute, which is set to "en" (English).
+    * The html tag includes the lang attribute, which is set to "en" (English).
 
 * Head Section:
-    * The <head> section includes meta tags for character set and viewport settings.Links to the CSS file and various favicons are correctly included.The <title> tag is properly used to set the page title.
+    * The head section includes meta tags for character set and viewport settings.Links to the CSS file and various favicons are correctly included.The title tag is properly used to set the page title.
 
 * Body Section:
-    * The <body> tag has an id attribute for identification and styling. A <header> tag is used to contain the navigation links, which is semantically appropriate. Navigation links are inside a <nav> tag, which is correct.
+    * The body tag has an id attribute for identification and styling. A header tag is used to contain the navigation links, which is semantically appropriate. Navigation links are inside a nav tag, which is correct.
 
 * Main Content:
-    * The main game content is wrapped inside a <main> tag, which is the correct semantic element for the main content of the page.The use of <div> elements to structure the game containers is appropriate. The headings (<h2>) for the dealer and player sections are correctly used. The <span> elements inside the <h2> tags are used for dynamic content updates (scores).
+    * The main game content is wrapped inside a main tag, which is the correct semantic element for the main content of the page.The use of div elements to structure the game containers is appropriate. The headings (h2) for the dealer and player sections are correctly used. The span elements inside the h2 tags are used for dynamic content updates (scores).
 
 * Game Interaction Elements:
-    * Buttons for game actions (Hit, Stay, Play Again, Rules) are included with appropriate IDs and classes. The modal for game rules is implemented using a combination of <div> elements and appropriate classes for styling and behavior.
+    * Buttons for game actions (Hit, Stay, Play Again, Rules) are included with appropriate IDs and classes. The modal for game rules is implemented using a combination of div elements and appropriate classes for styling and behavior.
 
 * Script Inclusion:
-    * The JavaScript file is included at the end of the <body>, which is a best practice to ensure  the HTML content loads before any scripts run.
+    * The JavaScript file is included at the end of the body, which is a best practice to ensure  the HTML content loads before any scripts run.
 
 ### Errors Found in Accessibility Testing 
 
